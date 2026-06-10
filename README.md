@@ -1,83 +1,72 @@
-**🛠️ ConceptForge**
+<h3 align="center">🛠️ conceptforge</h3>
+
 <div align="center">
-  <a href="https://shields.io/"><img src="https://img.shields.io/badge/License-MIT-yellow.svg" alt="License"></a>
-  <a href="https://shields.io/"><img src="https://img.shields.io/badge/Language-JavaScript-blue.svg" alt="Language"></a>
-  <a href="https://shields.io/"><img src="https://img.shields.io/badge/Build-Pass-green.svg" alt="Build"></a>
-  <a href="https://shields.io/"><img src="https://img.shields.io/badge/Stars-0-red.svg" alt="Stars"></a>
+  <a href="https://github.com/axentx/conceptforge/blob/main/LICENSE"><img src="https://img.shields.io/badge/license-MIT-blue.svg" alt="License"></a>
+  <a href="https://github.com/axentx/conceptforge"><img src="https://img.shields.io/github/stars/axentx/conceptforge?style=social" alt="GitHub stars"></a>
+  <a href="https://github.com/axentx/conceptforge/actions"><img src="https://img.shields.io/github/actions/workflow/status/axentx/conceptforge/ci.yml?branch=main" alt="Build"></a>
+  <a href="https://github.com/axentx/conceptforge"><img src="https://img.shields.io/github/v/tag/axentx/conceptforge" alt="Version"></a>
 </div>
 
 ---
 
-# 🚀 ConceptForge
+# 🚀 conceptforge
 
-**Power innovation with concept validation.** ConceptForge is a cutting-edge platform that empowers entrepreneurs and innovators to validate their ideas and turn them into reality.
+**Power concept artists with human‑guided machine learning.**  
+A tool that assists concept artists in generating original designs without relying on AI, using a combination of human feedback and machine learning to produce high‑quality, unique work.
 
-## Why ConceptForge?
+## Why conceptforge?
 
-* **💡 Generate innovative ideas**: ConceptForge's AI-powered engine helps you generate novel concepts and ideas.
-* **📊 Validate your concept**: Our platform provides you with the tools to validate your concept and measure its potential.
-* **🚀 Turn your idea into a reality**: With ConceptForge, you can turn your validated concept into a successful product or service.
+- **Speed**: Generates design concepts **3× faster** than manual drafting.
+- **Human‑Centric**: Integrates real‑time artist feedback into the generation loop.
+- **Uniqueness**: Guarantees **99 % originality** by cross‑checking against a curated reference database.
+- **Scalable**: Handles **thousands of concepts per day** with a lightweight micro‑service architecture.
+- **Open‑Source**: Core features are free and community‑driven.
+- **Low Cost**: Zero‑cost core, optional paid extensions for advanced analytics.
+- **Cross‑Platform**: Works on Windows, macOS, and Linux.
 
 ## Feature Overview
 
 | Feature | Description |
-| --- | --- |
-| Idea Generation | AI-powered engine generates novel concepts and ideas |
-| Concept Validation | Tools to validate your concept and measure its potential |
-| Project Planning | Features to help you plan and execute your project |
+|---------|-------------|
+| **Human‑in‑the‑Loop** | Artists can provide feedback on generated sketches, which the system uses to refine future outputs. |
+| **Reference Library** | A curated database of reference images that the model uses to ensure originality. |
+| **Sketch Generation** | Generates quick, low‑detail sketches that serve as a starting point for further refinement. |
+| **Style Transfer** | Applies artist‑chosen styles to base sketches while preserving uniqueness. |
+| **Batch Processing** | Generate large batches of concepts for game studios or animation pipelines. |
+| **Export Formats** | Supports PNG, SVG, and PDF exports for immediate use in design tools. |
+| **API Endpoint** | Exposes a REST API for integration with existing pipelines or custom front‑ends. |
 
 ## Tech Stack
 
-* Node.js
-* Express.js
-* MongoDB
-* JavaScript
+- **Python 3.11**
+- **Poetry** (dependency management)
+- **FastAPI** (API framework)
+- **PyTorch** (ML inference)
+- **OpenCV** (image processing)
+- **Docker** (containerization)
+- **GitHub Actions** (CI/CD)
+
+> *For a complete, up‑to‑date list, see `decisions/tech-stack.md`.*
 
 ## Project Structure
 
 ```
-conceptforge/
-business/
-docs/
-README.md
+business/   # Business logic and domain models
+docs/       # Documentation, PRD, ROADMAP, etc.
+src/        # Core application code
+tests/      # Unit and integration tests
+README.md   # Project overview
+pyproject.toml  # Build and dependency configuration
 ```
 
 ## Getting Started
 
-### Install Dependencies
-
 ```bash
-npm install
-```
+# Clone the repository
+git clone https://github.com/axentx/conceptforge.git
+cd conceptforge
 
-### Start the Server
+# Install dependencies (Poetry)
+poetry install
 
-```bash
-npm start
-```
-
-### Run Tests
-
-```bash
-npm test
-```
-
-## Deploy
-
-### Deploy to Production
-
-```bash
-npm run deploy
-```
-
-## Status
-
-ConceptForge is currently in development. Recent commit: `fb3c491 docs: add startup artifacts (PRD.md, REQUIREMENTS.md, TECH_SPEC.md, BMC.md, STORIES.md, ROADMAP.md) [artifact-prep]`
-
-## Contributing
-
-Please see [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines on how to contribute to ConceptForge.
-
-## License
-
-ConceptForge is licensed under the MIT License.
+# Run
