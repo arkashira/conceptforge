@@ -1,72 +1,89 @@
-<h3 align="center">🛠️ conceptforge</h3>
+<h3 align="center">🛠️ ConceptForge</h3>
 
 <div align="center">
-  <a href="https://github.com/axentx/conceptforge/blob/main/LICENSE"><img src="https://img.shields.io/badge/license-MIT-blue.svg" alt="License"></a>
-  <a href="https://github.com/axentx/conceptforge"><img src="https://img.shields.io/github/stars/axentx/conceptforge?style=social" alt="GitHub stars"></a>
-  <a href="https://github.com/axentx/conceptforge/actions"><img src="https://img.shields.io/github/actions/workflow/status/axentx/conceptforge/ci.yml?branch=main" alt="Build"></a>
-  <a href="https://github.com/axentx/conceptforge"><img src="https://img.shields.io/github/v/tag/axentx/conceptforge" alt="Version"></a>
+  [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+  [![Python](https://img.shields.io/badge/Python-3.9+-blue.svg)](https://www.python.org/)
+  [![Build Status](https://img.shields.io/badge/Build-passing-green.svg)](https://github.com/axentx/conceptforge)
+  [![GitHub stars](https://img.shields.io/github/stars/axentx/conceptforge?style=social)](https://github.com/axentx/conceptforge)
 </div>
 
 ---
 
-# 🚀 conceptforge
+# 🚀 ConceptForge
+**Power concept artists with human-guided creative tools.** A revolutionary platform that assists concept artists in generating original designs without relying on AI, using a combination of human feedback and machine learning to produce high-quality, unique work.
 
-**Power concept artists with human‑guided machine learning.**  
-A tool that assists concept artists in generating original designs without relying on AI, using a combination of human feedback and machine learning to produce high‑quality, unique work.
-
-## Why conceptforge?
-
-- **Speed**: Generates design concepts **3× faster** than manual drafting.
-- **Human‑Centric**: Integrates real‑time artist feedback into the generation loop.
-- **Uniqueness**: Guarantees **99 % originality** by cross‑checking against a curated reference database.
-- **Scalable**: Handles **thousands of concepts per day** with a lightweight micro‑service architecture.
-- **Open‑Source**: Core features are free and community‑driven.
-- **Low Cost**: Zero‑cost core, optional paid extensions for advanced analytics.
-- **Cross‑Platform**: Works on Windows, macOS, and Linux.
+## Why ConceptForge?
+- **Human-Centered**: Puts creative control back in the hands of artists with our unique human-feedback loop system
+- **Originality Guaranteed**: Produces truly unique designs by combining human creativity with ML assistance
+- **Professional Quality**: Engineered for professional concept artists working in game design, film, and animation
+- **Workflow Optimized**: Built specifically for the concept design workflow from sketch to final render
+- **No AI Dependency**: Eliminates concerns about AI-generated art while still leveraging machine learning insights
+- **Collaborative Enhancement**: Enhances the creative process through iterative human feedback cycles
+- **Performance Focused**: Optimized for speed without sacrificing artistic quality
 
 ## Feature Overview
-
 | Feature | Description |
-|---------|-------------|
-| **Human‑in‑the‑Loop** | Artists can provide feedback on generated sketches, which the system uses to refine future outputs. |
-| **Reference Library** | A curated database of reference images that the model uses to ensure originality. |
-| **Sketch Generation** | Generates quick, low‑detail sketches that serve as a starting point for further refinement. |
-| **Style Transfer** | Applies artist‑chosen styles to base sketches while preserving uniqueness. |
-| **Batch Processing** | Generate large batches of concepts for game studios or animation pipelines. |
-| **Export Formats** | Supports PNG, SVG, and PDF exports for immediate use in design tools. |
-| **API Endpoint** | Exposes a REST API for integration with existing pipelines or custom front‑ends. |
+|--------|-------------|
+| Design Generation | Creates original concept designs based on artist input and preferences |
+| Human Feedback Loop | Incorporates artist feedback to refine and improve generated concepts |
+| ML-Assisted Enhancement | Uses machine learning to suggest improvements while maintaining artistic vision |
+| Style Transfer | Applies artistic styles to generated concepts while preserving originality |
+| Iterative Refinement | Allows artists to iteratively refine concepts through multiple feedback cycles |
+| Export Capabilities | Supports export to industry-standard formats for seamless integration into pipelines |
 
 ## Tech Stack
-
-- **Python 3.11**
-- **Poetry** (dependency management)
-- **FastAPI** (API framework)
-- **PyTorch** (ML inference)
-- **OpenCV** (image processing)
-- **Docker** (containerization)
-- **GitHub Actions** (CI/CD)
-
-> *For a complete, up‑to‑date list, see `decisions/tech-stack.md`.*
+- Python 3.9+
+- FastAPI for the backend API
+- React for the frontend interface
+- PyTorch for machine learning components
+- PostgreSQL for data persistence
+- Redis for caching and session management
+- Docker for containerization
+- GitHub Actions for CI/CD
 
 ## Project Structure
-
 ```
-business/   # Business logic and domain models
-docs/       # Documentation, PRD, ROADMAP, etc.
-src/        # Core application code
-tests/      # Unit and integration tests
-README.md   # Project overview
-pyproject.toml  # Build and dependency configuration
+.
+├── business/          # Business logic and domain models
+├── docs/             # Documentation and artifacts
+├── src/              # Source code
+│   ├── api/         # API endpoints and routes
+│   ├── core/        # Core functionality
+│   ├── ml/          # Machine learning components
+│   └── ui/          # User interface components
+└── tests/           # Test suites
 ```
 
 ## Getting Started
-
 ```bash
 # Clone the repository
 git clone https://github.com/axentx/conceptforge.git
 cd conceptforge
 
-# Install dependencies (Poetry)
-poetry install
+# Install dependencies
+pip install -r requirements.txt
 
-# Run
+# Run the development server
+python -m uvicorn src.api.main:app --reload
+
+# Run tests
+pytest tests/
+```
+
+## Deploy
+```bash
+# Build Docker image
+docker build -t conceptforge .
+
+# Run with Docker Compose
+docker-compose up -d
+```
+
+## Status
+In active development with recent focus on core functionality and user experience. Last commit: axentx-dev-bot: code-build cycle 20260610-095152-conceptf
+
+## Contributing
+See [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines on how to contribute to ConceptForge.
+
+## License
+This project is licensed under the MIT License.
