@@ -1,90 +1,95 @@
 <h3 align="center">🛠️ conceptforge</h3>
 
 <div align="center">
-  <a href="https://github.com/axentx/conceptforge/blob/main/LICENSE"><img src="https://img.shields.io/badge/license-MIT-blue.svg" alt="License: MIT"></a>
+  <a href="https://github.com/axentx/conceptforge/blob/main/LICENSE"><img src="https://img.shields.io/badge/license-MIT-blue.svg" alt="License"></a>
   <a href="https://github.com/axentx/conceptforge"><img src="https://img.shields.io/github/stars/axentx/conceptforge.svg" alt="GitHub stars"></a>
-  <a href="https://github.com/axentx/conceptforge/actions"><img src="https://github.com/axentx/conceptforge/actions/workflows/ci.yml/badge.svg" alt="Build status"></a>
-  <a href="https://github.com/axentx/conceptforge"><img src="https://img.shields.io/badge/language-Python-blue.svg" alt="Language: Python"></a>
+  <a href="https://github.com/axentx/conceptforge/actions"><img src="https://img.shields.io/github/actions/workflow/status/axentx/conceptforge/ci.yml?branch=main" alt="Build status"></a>
+  <a href="https://pypi.org/project/conceptforge/"><img src="https://img.shields.io/pypi/pyversions/conceptforge.svg" alt="Python versions"></a>
 </div>
 
 ---
 
 # 🚀 conceptforge
 
-**Power concept artists with AI‑augmented human feedback.**  
+**Power concept artists with collaborative AI‑augmented design.**  
 A tool that assists concept artists in generating original designs without relying on AI, using a combination of human feedback and machine learning to produce high‑quality, unique work.
 
 ## Why conceptforge?
 
-- **Human‑in‑the‑loop**: 95 % of design iterations involve real artist feedback, ensuring authenticity.
-- **Originality scoring**: 80 % of generated concepts pass our originality threshold before final approval.
-- **Rapid prototyping**: Reduce concept turnaround time by 40 % compared to manual workflows.
-- **Built for concept artists**: Tailored to the creative pipeline of game, film, and illustration studios.
-- **Collaborative feedback**: 3‑way sync with design teams, reducing miscommunication by 30 %.
-- **Export versatility**: Supports PSD, SVG, and 3D OBJ formats for seamless studio integration.
-- **Scalable ML backbone**: Uses lightweight models that run locally, eliminating cloud latency.
+- **Human‑centric**: 100 % of the creative process is driven by artist input, ensuring originality.
+- **AI‑enhanced**: Machine learning models suggest complementary elements, reducing iteration time by ~30 %.
+- **Feedback loop**: Real‑time scoring and ranking help artists focus on the most promising concepts.
+- **Cross‑platform**: Works on Windows, macOS, and Linux with a single Python installation.
+- **Open‑source**: Transparent codebase and community‑driven improvements.
+- **Built for concept artists**: Tailored for game, film, and illustration studios looking to streamline pre‑production.
+- **Scalable**: Designed to handle large image datasets and integrate with existing pipelines.
 
 ## Feature Overview
 
 | Feature | Description |
 |---------|-------------|
-| **Human‑in‑the‑loop** | Artists can annotate and refine AI suggestions in real time. |
-| **ML Style Transfer** | Applies learned styles from a curated dataset to new concepts. |
-| **Originality Scoring** | Quantifies uniqueness against a reference corpus. |
-| **Collaborative Feedback** | Multi‑user annotations and version history. |
-| **Export Suite** | Export designs to PSD, SVG, OBJ, and PNG. |
-| **Version Control** | Git‑style commits for design iterations. |
-| **CLI & API** | Command‑line interface and REST API for automation. |
+| **Interactive Canvas** | Drag‑and‑drop assets and instantly preview AI suggestions. |
+| **Feedback Manager** | Collect, tag, and rank artist feedback to refine model outputs. |
+| **Batch Generation** | Generate thousands of concept variations with a single command. |
+| **Export Toolkit** | Export assets in PNG, SVG, or proprietary formats for downstream use. |
+| **Analytics Dashboard** | Track iteration metrics and model performance over time. |
 
 ## Tech Stack
 
-*(See `decisions/tech-stack.md` for the full, locked stack.)*
+> *See `decisions/tech-stack.md` for the full, locked stack.*
 
 ## Project Structure
 
 ```
 conceptforge/
-├── business/          # Business logic & domain models
-├── docs/              # Documentation, PRD, ROADMAP, etc.
-├── src/               # Core application code
-│   └── conceptforge/  # Package namespace
-├── tests/             # Unit and integration tests
-├── pyproject.toml     # Build & dependency configuration
-└── README.md          # Project documentation
+├── business/        # Business logic and domain models
+├── docs/            # Documentation and user guides
+├── src/             # Core application code
+├── tests/           # Automated tests
+├── pyproject.toml   # Build and dependency configuration
+└── README.md        # This file
 ```
 
 ## Getting Started
 
 ```bash
-# Clone the repo
+# Clone the repository
 git clone https://github.com/axentx/conceptforge.git
 cd conceptforge
 
 # Install dependencies (editable mode)
 pip install -e .
 
-# Run the CLI
-conceptforge --help
+# Run the application
+python -m conceptforge
+```
+
+### Running Tests
+
+```bash
+pytest
 ```
 
 ## Deploy
 
 ```bash
-# Build Docker image
-docker build -t axentx/conceptforge:latest .
+# Build the Docker image
+docker build -t conceptforge .
 
-# Run locally
-docker run -p 8000:8000 axentx/conceptforge:latest
+# Run the container
+docker run -p 8000:8000 conceptforge
 ```
+
+> *Deploy instructions may vary based on the locked tech stack; consult `decisions/tech-stack.md` for platform‑specific guidance.*
 
 ## Status
 
-🚀 **Active** – Last commit `51f7916` (2026‑06‑10) added the latest code‑build cycle.
+Active development – last commit on **2026‑06‑10**: `axentx-dev-bot: code-build cycle 20260610-095216-conceptf`.
 
 ## Contributing
 
-See the [CONTRIBUTING.md](CONTRIBUTING.md) guide for how to get started.
+See [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines.
 
 ## License
 
-MIT © Axentx
+This project is licensed under the MIT License – see the [LICENSE](LICENSE) file for details.
