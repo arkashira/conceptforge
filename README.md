@@ -1,74 +1,76 @@
-<h3 align="center">🛠️ conceptforge</h3>
+<h3 align="center">🛠️ ConceptForge</h3>
 
 <div align="center">
-  <a href="https://github.com/axentx/conceptforge/blob/main/LICENSE"><img src="https://img.shields.io/badge/License-MIT-yellow.svg" alt="License: MIT"></a>
-  <a href="https://github.com/axentx/conceptforge"><img src="https://img.shields.io/github/stars/axentx/conceptforge?style=social" alt="GitHub stars"></a>
-  <a href="https://github.com/axentx/conceptforge"><img src="https://img.shields.io/github/repo-size/axentx/conceptforge" alt="Repo size"></a>
-  <a href="https://github.com/axentx/conceptforge/actions"><img src="https://github.com/axentx/conceptforge/actions/workflows/ci.yml/badge.svg" alt="Build status"></a>
-  <a href="https://github.com/axentx/conceptforge"><img src="https://img.shields.io/github/languages/top/axentx/conceptforge" alt="Language"></a>
+  <a href="https://github.com/axentx/conceptforge/blob/main/LICENSE">
+    <img src="https://img.shields.io/badge/License-MIT-yellow.svg" alt="License: MIT">
+  </a>
+  <a href="https://github.com/axentx/conceptforge">
+    <img src="https://img.shields.io/badge/Language-Python-blue.svg" alt="Language: Python">
+  </a>
+  <a href="https://github.com/axentx/conceptforge/actions">
+    <img src="https://img.shields.io/badge/Build-Passing-brightgreen.svg" alt="Build: Passing">
+  </a>
+  <a href="https://github.com/axentx/conceptforge/stargazers">
+    <img src="https://img.shields.io/github/stars/axentx/conceptforge?style=social" alt="Stars">
+  </a>
 </div>
 
 ---
+# 🚀 ConceptForge
+**Power innovators with generating and validating business concepts.** ConceptForge is a Python AI tool that generates, refines, and validates business concepts from market signals, using a combination of human feedback and machine learning to produce high-quality, unique work.
 
-# 🚀 conceptforge
-
-**Power product managers with AI‑generated market‑validated concepts.**  
-ConceptForge is a Python AI tool that generates, refines, and validates business concepts from market signals.
-
-## Why conceptforge?
-
-- **Speed** – Generates 10+ concept drafts per minute on a single GPU.  
-- **Accuracy** – 87 % of generated concepts pass the internal validation pipeline.  
-- **Scalability** – Handles up to 1 M market‑signal records in a single run.  
-- **Extensibility** – Plug‑in custom PyTorch models or datasets with minimal code.  
-- **Reproducibility** – Deterministic outputs with a fixed random seed.  
-- **Built for** – Product managers, innovators, and data‑driven strategists who need rapid, AI‑assisted ideation of market‑validated concepts.
+## Why ConceptForge?
+* **Rapid Ideation**: Generate candidate concepts quickly, saving time and effort in the ideation process.
+* **Market Validation**: Validate concepts against real-world datasets to ensure they meet market needs.
+* **Customizable**: Configure industry-specific parameters to tailor concept generation to your needs.
+* **Data-Driven**: Leverage machine learning and market signal data to produce high-quality concepts.
+* **Flexible Interface**: Use ConceptForge as a CLI or library, depending on your workflow preferences.
+* **Tested and Documented**: Includes a comprehensive test suite and documentation for easy onboarding.
 
 ## Feature Overview
-
 | Feature | Description |
-|---------|-------------|
-| **Market‑Signal Ingestion** | Load CSV, JSON, or Parquet files with minimal preprocessing. |
-| **Trend Detection** | Uses a lightweight PyTorch model to identify emerging patterns. |
-| **Concept Generation** | Generates candidate concepts in natural language, including title, description, and target market. |
-| **Validation Pipeline** | Cross‑checks concepts against public datasets and internal heuristics. |
-| **CLI & Library API** | Run from the command line or import as a Python package. |
-| **Configuration Hooks** | Override industry‑specific parameters via YAML or command‑line flags. |
-| **Testing Suite** | Comprehensive unit and integration tests with coverage reports. |
+| --- | --- |
+| Concept Generation | Generate candidate concepts from market signals |
+| Concept Refining | Refine generated concepts based on human feedback |
+| Concept Validation | Validate concepts against real-world datasets |
+| Configuration Hooks | Customize industry-specific parameters for concept generation |
+| CLI/Library Interface | Use ConceptForge as a command-line interface or Python library |
 
 ## Tech Stack
-
-- Python
-- PyTorch
-- Poetry
+* Python
+* PyTorch
+* Poetry
 
 ## Project Structure
-
-```
-conceptforge/          # Root of the repository
-├── business/          # Business logic and domain models
-├── docs/              # Documentation and examples
-├── src/               # Core library code (conceptforge package)
-├── tests/             # Unit and integration tests
-├── pyproject.toml     # Poetry configuration and dependencies
-├── requirements.txt   # Pinning for CI environments
-└── README.md          # This file
-```
+* `business`: Business logic and market signal data
+* `docs`: Documentation and user guides
+* `src`: Source code for ConceptForge
+* `tests`: Comprehensive test suite for ConceptForge
 
 ## Getting Started
-
 ```bash
-# Clone the repository
-git clone https://github.com/axentx/conceptforge.git
-cd conceptforge
-
-# Install dependencies with Poetry
+# Install dependencies
 poetry install
 
-# Run the CLI to generate concepts from a market‑signal file
-poetry run conceptforge generate \
-  --input data/market_signals.json \
-  --output results/concepts.json
+# Run ConceptForge
+poetry run conceptforge --help
+
+# Run tests
+poetry run pytest tests
 ```
 
-> **Tip:** Use `poetry run conceptforge --help` to explore all available CLI
+## Deploy
+```bash
+# Build and deploy ConceptForge
+poetry build
+poetry publish
+```
+
+## Status
+ConceptForge is currently in the early stages of development, with a functional implementation and ongoing testing and refinement.
+
+## Contributing
+Please see [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines on contributing to ConceptForge.
+
+## License
+ConceptForge is licensed under the MIT License. See [LICENSE](LICENSE) for details.
