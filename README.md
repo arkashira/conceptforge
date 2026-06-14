@@ -1,18 +1,11 @@
-# ConceptForge
-
-A Python project for managing training modules for concept artists.
+# Concept Forge
+A Python project for managing training modules and tracking user progress.
 
 ## Features
-
-* Add and retrieve training modules
+* Add training modules with exercises and video walkthroughs
 * Track user progress through each module
-* Get module details by name
+* Organize modules by difficulty level
 
 ## Usage
-
-1. Create a `ConceptForge` instance
-2. Add training modules using `add_module`
-3. Retrieve modules using `get_modules`
-4. Track user progress using `track_progress`
-5. Get user progress using `get_progress`
-6. Get module details using `get_module`
+1. Run `python -m pytest` to run the tests.
+2. Run `python src/conceptforge.py` to run the main program.
