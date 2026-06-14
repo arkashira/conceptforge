@@ -1,16 +1,18 @@
-# Concept Forge
+# ConceptForge
 
-A platform for concept artists to access structured training modules covering foundational sketching, character design, and environment creation.
+A Python project for managing training modules for concept artists.
 
 ## Features
 
-* Access to training modules via a dashboard
-* Interactive exercises and video walkthroughs for each module
-* Progress tracking for each module
-* Modules organized by difficulty level (beginner to advanced)
+* Add and retrieve training modules
+* Track user progress through each module
+* Get module details by name
 
 ## Usage
 
-1. Install the required dependencies using `poetry install`
-2. Run the tests using `pytest`
-3. Use the `ConceptForge` class to create a new instance and add training modules
+1. Create a `ConceptForge` instance
+2. Add training modules using `add_module`
+3. Retrieve modules using `get_modules`
+4. Track user progress using `track_progress`
+5. Get user progress using `get_progress`
+6. Get module details using `get_module`

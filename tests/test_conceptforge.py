@@ -1,34 +1,41 @@
 import pytest
-from src.conceptforge import ConceptForge, TrainingModule
+from conceptforge import ConceptForge, TrainingModule, DifficultyLevel
 
 def test_add_module():
-    concept_forge = ConceptForge()
-    module = TrainingModule("Foundational Sketching", "Beginner", ["Exercise 1", "Exercise 2"], ["Video 1", "Video 2"])
-    concept_forge.add_module(module)
-    assert len(concept_forge.get_modules()) == 1
+    forge = ConceptForge()
+    module = TrainingModule("Foundational Sketching", DifficultyLevel.BEGINNER, [], [])
+    forge.add_module(module)
+    assert len(forge.get_modules()) == 1
 
-def test_get_module_by_name():
-    concept_forge = ConceptForge()
-    module = TrainingModule("Foundational Sketching", "Beginner", ["Exercise 1", "Exercise 2"], ["Video 1", "Video 2"])
-    concept_forge.add_module(module)
-    retrieved_module = concept_forge.get_module_by_name("Foundational Sketching")
-    assert retrieved_module.name == "Foundational Sketching"
+def test_get_modules():
+    forge = ConceptForge()
+    module1 = TrainingModule("Foundational Sketching", DifficultyLevel.BEGINNER, [], [])
+    module2 = TrainingModule("Character Design", DifficultyLevel.INTERMEDIATE, [], [])
+    forge.add_module(module1)
+    forge.add_module(module2)
+    modules = forge.get_modules()
+    assert len(modules) == 2
+    assert modules[0].name == "Foundational Sketching"
+    assert modules[1].name == "Character Design"
 
 def test_track_progress():
-    concept_forge = ConceptForge()
-    module = TrainingModule("Foundational Sketching", "Beginner", ["Exercise 1", "Exercise 2"], ["Video 1", "Video 2"])
-    concept_forge.add_module(module)
-    concept_forge.track_progress("Foundational Sketching", 50)
-    assert concept_forge.get_progress("Foundational Sketching") == 50
+    forge = ConceptForge()
+    module = TrainingModule("Foundational Sketching", DifficultyLevel.BEGINNER, [], [])
+    forge.add_module(module)
+    forge.track_progress("user1", module.name, 50)
+    assert forge.get_progress("user1", module.name) == 50
 
 def test_get_progress():
-    concept_forge = ConceptForge()
-    module = TrainingModule("Foundational Sketching", "Beginner", ["Exercise 1", "Exercise 2"], ["Video 1", "Video 2"])
-    concept_forge.add_module(module)
-    concept_forge.track_progress("Foundational Sketching", 50)
-    assert concept_forge.get_progress("Foundational Sketching") == 50
+    forge = ConceptForge()
+    module = TrainingModule("Foundational Sketching", DifficultyLevel.BEGINNER, [], [])
+    forge.add_module(module)
+    forge.track_progress("user1", module.name, 50)
+    assert forge.get_progress("user1", module.name) == 50
+    assert forge.get_progress("user2", module.name) is None
 
-def test_get_progress_module_not_found():
-    concept_forge = ConceptForge()
-    with pytest.raises(ValueError):
-        concept_forge.get_progress("Non-existent Module")
+def test_get_module():
+    forge = ConceptForge()
+    module = TrainingModule("Foundational Sketching", DifficultyLevel.BEGINNER, [], [])
+    forge.add_module(module)
+    assert forge.get_module(module.name).name == module.name
+    assert forge.get_module("Non-existent Module") is None
